@@ -1,0 +1,21 @@
+{
+  "name": "Ender Flasks",
+  "advancement": "specutils:recipes/pedestal/cyan_ender_flask",
+  "icon": "specutils:cyan_ender_flask",
+  "category": "spectrum:magic_category",
+  "extra_recipe_mappings": {
+    "specutils:cyan_ender_flask": 0
+  },
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Ender Flask can hold as much $(l:magic/ink)Ink$() as an $(l:magic/ink_flask)Ink Flask$(), but can only hold ink of the same color as itself. When first crafted, the Ender Flask does nothing. You must use it to bind it to yourself, after which all Ender Flasks of the same color that are bound to you will hold the same ink."
+    },
+    {
+      "type": "spectrum:pedestal_crafting",
+      "title": "Pedestal Recipe",
+      "recipe": "specutils:cyan_ender_flask",
+      "text": "This is just an example. Replace the $(l:general/pigment)Cyan Pigment$() with any two $(l:general/pigment)Pigments$() of the same color to get a matching Ender Flask."
+    }
+  ]
+}

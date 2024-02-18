@@ -12,6 +12,18 @@
       },
       "trigger": "revelationary:advancement_gotten"
     },
+    "has_required_pigment": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spectrum:orange_pigment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "obtained_ink_flask": {
       "conditions": {
         "items": [
@@ -34,6 +46,9 @@
     ],
     [
       "can_use_moonstone_pedestal"
+    ],
+    [
+      "has_required_pigment"
     ]
   ],
   "sends_telemetry_event": false

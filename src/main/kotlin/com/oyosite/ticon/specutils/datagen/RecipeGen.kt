@@ -27,11 +27,12 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
     }
 
     fun enderFlaskRecipe(color: DyeColor, exporter: Consumer<RecipeJsonProvider>){
+        val pigment = SpectrumItems::class.java.getDeclaredField("${color.name.uppercase()}_PIGMENT").get(null) as? Item
         val builder = PigmentPedestalRecipeJsonBuilder(ItemRegistry.enderFlasks[color.ordinal])
         builder.tier("complex").experience(8.0).pattern("OYO","PFP","OEO")
             .ingredient('O', Ingredient.ofItems(Items.OBSIDIAN))
             .ingredient('E', Ingredient.ofItems(SpectrumBlocks.RADIATING_ENDER))
-            .ingredient('P', Ingredient.ofItems(SpectrumItems::class.java.getDeclaredField("${color.name.uppercase()}_PIGMENT").get(null) as? Item))
+            .ingredient('P', Ingredient.ofItems(pigment))
             .ingredient('F', Ingredient.ofItems(SpectrumItems.INK_FLASK))
             .ingredient('Y', Ingredient.ofItems(Items.ENDER_EYE))
             .powders(8, 2, 8, 16, 4)
@@ -39,6 +40,7 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
             .criterion("gotten_radiating_ender", AdvancementGottenCriterion.create(Identifier("spectrum:get_radiating_ender")))
             .criterion("obtained_ink_flask", InventoryChangedCriterion.Conditions.items(SpectrumItems.INK_FLASK))
             .criterion("can_use_moonstone_pedestal", AdvancementGottenCriterion.create(Identifier("spectrum:build_complex_pedestal_structure")))
+            .criterion("has_required_pigment", InventoryChangedCriterion.Conditions.items(pigment))
             .offerTo(exporter)
     }
 

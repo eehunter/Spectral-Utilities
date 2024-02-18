@@ -36,7 +36,7 @@ class EnderFlask(settings: FabricItemSettings, val color: InkColor): InkFlaskIte
 
     override fun getEnergyStorage(itemStack: ItemStack?): SingleInkStorage {
         val owner = itemStack?.owner?:return DUMMY_ENERGY_STORAGE
-        return ScoreboardComponentEntrypoint.ENDER_FLASK[scoreboard?:return DUMMY_ENERGY_STORAGE][owner, color.dyeColor]?: DUMMY_ENERGY_STORAGE
+        return ScoreboardComponentEntrypoint.ENDER_FLASK[scoreboard?:return DUMMY_ENERGY_STORAGE][owner, color.dyeColor]
     }
 
     override fun setEnergyStorage(itemStack: ItemStack?, storage: InkStorage?) {
