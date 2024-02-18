@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "specutils:item/cyan_ender_flask"
+  }
+}

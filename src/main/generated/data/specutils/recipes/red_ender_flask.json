@@ -1,0 +1,37 @@
+{
+  "type": "spectrum:pedestal",
+  "black": 16,
+  "cyan": 8,
+  "experience": 8.0,
+  "key": {
+    "E": {
+      "item": "spectrum:radiating_ender"
+    },
+    "F": {
+      "item": "spectrum:ink_flask"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "P": {
+      "item": "spectrum:red_pigment"
+    },
+    "Y": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "magenta": 2,
+  "pattern": [
+    "OYO",
+    "PFP",
+    "OEO"
+  ],
+  "result": {
+    "count": 1,
+    "item": "specutils:red_ender_flask"
+  },
+  "tier": "complex",
+  "time": 240,
+  "white": 4,
+  "yellow": 8
+}

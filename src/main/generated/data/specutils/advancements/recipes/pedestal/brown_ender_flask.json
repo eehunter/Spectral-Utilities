@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "can_use_moonstone_pedestal": {
+      "conditions": {
+        "advancement_identifier": "spectrum:build_complex_pedestal_structure"
+      },
+      "trigger": "revelationary:advancement_gotten"
+    },
+    "gotten_radiating_ender": {
+      "conditions": {
+        "advancement_identifier": "spectrum:get_radiating_ender"
+      },
+      "trigger": "revelationary:advancement_gotten"
+    },
+    "obtained_ink_flask": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spectrum:ink_flask"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "gotten_radiating_ender"
+    ],
+    [
+      "obtained_ink_flask"
+    ],
+    [
+      "can_use_moonstone_pedestal"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
