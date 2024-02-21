@@ -27,6 +27,8 @@ loom{
             vmArg("-Dfabric-api.datagen.strict_validation")
             vmArg("-Dfabric-api.datagen.modid=${project.property("modid")}")
 
+
+
             ideConfigGenerated(true)
             runDir = "build/datagen"
         }

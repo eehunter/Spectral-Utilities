@@ -1,0 +1,26 @@
+{
+  "name": "Auxiliary Ink Supplier",
+  "advancement": "specutils:recipes/pedestal/calcite_auxiliary_ink_supplier",
+  "icon": "specutils:calcite_auxiliary_ink_supplier",
+  "category": "spectrum:magical_blocks_category",
+  "extra_recipe_mappings": {
+    "specutils:calcite_auxiliary_ink_supplier": 0,
+    "specutils:basalt_auxiliary_ink_supplier": 0
+  },
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Auxiliary Ink Supplier allows an $(l:magic/ink)Ink$()-containing item to be connected to a machine as though it were inserted into that machine's $(l:magic/ink)Ink$() storage slot. The primary use-case for this is automatically supplying a $(magical_blocks/cinderhearth)Cinderhearth$() with multiple different colors of $(l:magic/ink)Ink$()."
+    },
+    {
+      "type": "spectrum:pedestal_crafting",
+      "title": "Pedestal Recipe",
+      "recipe": "specutils:calcite_auxiliary_ink_supplier"
+    },
+    {
+      "type": "spectrum:pedestal_crafting",
+      "title": "Pedestal Recipe",
+      "recipe": "specutils:basalt_auxiliary_ink_supplier"
+    }
+  ]
+}

@@ -30,13 +30,13 @@ open class AuxiliaryInkSupplierBlock(settings: Settings) : InWorldInteractionBlo
     constructor(settings: Settings.()->Unit): this(Settings.create().apply(settings))
 
     init {
-        defaultState = defaultState.with(MachineMaterial.PROPERTY, MachineMaterial.CALCITE).with(FluidLogging.ANY_INCLUDING_NONE, FluidLogging.State.NOT_LOGGED)
+        defaultState = defaultState.with(FluidLogging.ANY_INCLUDING_NONE, FluidLogging.State.NOT_LOGGED)
     }
     override fun getRenderType(state: BlockState): BlockRenderType = BlockRenderType.MODEL
 
     override fun createBlockEntity(pos: BlockPos, state: BlockState): BlockEntity = AuxiliaryInkSupplierBlockEntity(pos, state)
 
-    override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) { builder.add(MachineMaterial.PROPERTY, FluidLogging.ANY_INCLUDING_NONE) }
+    override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) { builder.add(FluidLogging.ANY_INCLUDING_NONE) }
 
     override fun getFluidState(state: BlockState): FluidState = state[FluidLogging.ANY_INCLUDING_NONE].fluidState
 

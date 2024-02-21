@@ -1,0 +1,31 @@
+{
+  "type": "spectrum:pedestal",
+  "black": 4,
+  "cyan": 2,
+  "experience": 4.0,
+  "key": {
+    "B": {
+      "item": "spectrum:polished_calcite"
+    },
+    "M": {
+      "item": "spectrum:moonstone_storage_block"
+    },
+    "P": {
+      "item": "spectrum:purple_pigment"
+    }
+  },
+  "magenta": 2,
+  "pattern": [
+    "BMB",
+    "PBP",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "item": "specutils:calcite_auxiliary_ink_supplier"
+  },
+  "tier": "complex",
+  "time": 1200,
+  "white": 4,
+  "yellow": 2
+}

@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "brightness=0,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/off"
+    },
+    "brightness=0,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=1,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=1,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=10,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=10,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=11,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=11,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=12,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=12,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=13,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=13,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=14,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=14,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=15,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=15,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=2,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=2,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=3,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=3,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=4,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=4,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=5,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=5,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=6,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=6,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=7,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=7,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=8,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=8,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    },
+    "brightness=9,overcharge=false": {
+      "model": "specutils:block/moonstone_grow_lamp/on"
+    },
+    "brightness=9,overcharge=true": {
+      "model": "specutils:block/moonstone_grow_lamp/overcharged"
+    }
+  }
+}

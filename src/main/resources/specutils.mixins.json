@@ -4,6 +4,9 @@
   "package": "com.oyosite.ticon.specutils.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "JadeVineMixin",
+    "JadeVineRootsBlockEntityMixin",
+    "JadeVineRootsBlockMixin"
   ],
   "client": [
   ],

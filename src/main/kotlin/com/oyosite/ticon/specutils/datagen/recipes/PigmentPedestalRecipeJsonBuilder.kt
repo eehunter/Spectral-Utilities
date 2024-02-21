@@ -42,7 +42,7 @@ class PigmentPedestalRecipeJsonBuilder(result: ItemConvertible, count: Int = 1) 
     }
 
     fun experience(xp: Double) = apply { json.addProperty("experience", xp) }
-    fun pattern(row1: String, row2: String, row3: String) = apply { json.add("pattern", JsonArray().apply{add(row1);add(row2);add(row3)}) }
+    fun pattern(row1: String, row2: String? = null, row3: String? = null) = apply { json.add("pattern", JsonArray().apply{add(row1);row2?.let(::add);row3?.let(::add)}) }
     fun ingredient(key: Char, value: Ingredient) = apply {
         val keys = json.getAsJsonObject("key")?:JsonObject().also{json.add("key", it)}
         keys.add(key.toString(), value.toJson())

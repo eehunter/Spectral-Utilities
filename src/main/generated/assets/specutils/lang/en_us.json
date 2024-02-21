@@ -1,6 +1,7 @@
 {
   "block.specutils.basalt_auxiliary_ink_supplier": "Basalt Auxiliary Ink Supplier",
   "block.specutils.calcite_auxiliary_ink_supplier": "Calcite Auxiliary Ink Supplier",
+  "block.specutils.moonstone_grow_lamp": "Moonstone Grow Lamp",
   "item.specutils.binding_tool": "Binding Tool",
   "item.specutils.binding_tool.tooltip.linked_to": "Bound to x=%s, y=%s, z=%s.",
   "item.specutils.binding_tool.tooltip.unlinked": "Not Bound.",

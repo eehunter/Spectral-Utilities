@@ -1,6 +1,7 @@
 package com.oyosite.ticon.specutils.datagen.tags
 
 import com.oyosite.ticon.specutils.block.auxilary_ink_supplier.AuxiliaryInkSupplierBlockEntity
+import com.oyosite.ticon.specutils.block.moonstone_grow_lamp.MoonstoneGrowLampBlock
 import de.dafuqs.spectrum.registries.SpectrumBlocks
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider
@@ -19,6 +20,9 @@ class BlockTagGen(output: FabricDataOutput, registriesFuture: CompletableFuture<
             +SpectrumBlocks.CINDERHEARTH
         }
 
+        MoonstoneGrowLampBlock.OVERCHARGE_BLOCKS{
+            +SpectrumBlocks.SHIMMERSTONE_BLOCK
+        }
     }
 
 

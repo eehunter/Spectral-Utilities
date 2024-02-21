@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "specutils:block/moonstone_grow_lamp/overcharged"
+  }
+}
