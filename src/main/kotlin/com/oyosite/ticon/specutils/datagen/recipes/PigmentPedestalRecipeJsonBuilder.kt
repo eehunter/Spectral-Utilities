@@ -9,10 +9,12 @@ import de.dafuqs.spectrum.recipe.pedestal.ShapedPedestalRecipeSerializer
 import net.minecraft.advancement.Advancement
 import net.minecraft.advancement.criterion.CriterionConditions
 import net.minecraft.data.server.recipe.RecipeJsonProvider
+import net.minecraft.item.Item
 import net.minecraft.item.ItemConvertible
 import net.minecraft.recipe.Ingredient
 import net.minecraft.recipe.RecipeSerializer
 import net.minecraft.registry.Registries
+import net.minecraft.registry.tag.TagKey
 import net.minecraft.util.Identifier
 import java.util.function.Consumer
 
@@ -47,6 +49,12 @@ class PigmentPedestalRecipeJsonBuilder(result: ItemConvertible, count: Int = 1) 
         val keys = json.getAsJsonObject("key")?:JsonObject().also{json.add("key", it)}
         keys.add(key.toString(), value.toJson())
     }
+
+    //values entries should not be null, but are nullable for convenience.
+    fun ingredient(key: Char, vararg values: ItemConvertible?) = ingredient(key, Ingredient.ofItems(*values))
+
+    fun ingredient(key: Char, tag: TagKey<Item>) = ingredient(key, Ingredient.fromTag(tag))
+
     fun id(id: Identifier) = apply{this.id = id}
     fun id(transform: Identifier.()->Identifier) = apply {id = id.transform()}
 

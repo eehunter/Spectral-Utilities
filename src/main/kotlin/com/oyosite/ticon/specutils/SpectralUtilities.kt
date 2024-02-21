@@ -1,8 +1,11 @@
 package com.oyosite.ticon.specutils
 
 import com.oyosite.ticon.specutils.block.BlockRegistry
+import com.oyosite.ticon.specutils.config.CommonConfig
 import com.oyosite.ticon.specutils.item.EnderFlask
 import com.oyosite.ticon.specutils.item.ItemRegistry
+import me.shedaniel.autoconfig.AutoConfig
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
 import net.minecraft.util.Identifier
@@ -30,6 +33,7 @@ object SpectralUtilities: ModInitializer {
         ItemRegistry()
         BlockRegistry()
 
+        AutoConfig.register(CommonConfig::class.java, ::GsonConfigSerializer)
 
 
         //The second event may be redundant, but I want to be safe.

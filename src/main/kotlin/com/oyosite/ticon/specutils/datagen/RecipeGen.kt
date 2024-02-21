@@ -31,6 +31,42 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
 
         auxiliaryInkSupplierRecipe(BlockRegistry.BASALT_AUXILIARY_INK_SUPPLIER, exporter)
         auxiliaryInkSupplierRecipe(BlockRegistry.CALCITE_AUXILIARY_INK_SUPPLIER, exporter)
+
+        bindingToolRecipe(exporter)
+        moonstoneGrowLampRecipe(exporter)
+    }
+
+    fun moonstoneGrowLampRecipe(exporter: Consumer<RecipeJsonProvider>){
+        PigmentPedestalRecipeJsonBuilder(ItemRegistry.BINDING_TOOL).tier("complex").experience(2.0)
+            .pattern("BLB", "LCL", "BLB")
+            .ingredient('B', SpectrumBlocks.POLISHED_BASALT, SpectrumBlocks.POLISHED_CALCITE)
+            .ingredient('L', SpectrumBlocks.MOONSTONE_BASALT_LAMP, SpectrumBlocks.MOONSTONE_CALCITE_LAMP)
+            .ingredient('C', SpectrumItems.MOONSTONE_CORE)
+            .powders(1, 2, 4, 0, 4)
+            .time(600)
+            .criterion("can_use_moonstone_pedestal", AdvancementGottenCriterion.create(Identifier("spectrum:lategame/build_complex_pedestal_structure")))
+            .criterion("obtained_moonstone_core", InventoryChangedCriterion.Conditions.items(SpectrumItems.MOONSTONE_CORE))
+            .offerTo(exporter)
+    }
+
+    fun bindingToolRecipe(exporter: Consumer<RecipeJsonProvider>){
+        PigmentPedestalRecipeJsonBuilder(ItemRegistry.BINDING_TOOL).tier("complex").experience(2.0)
+            .pattern("  E", " B ", "B  ")
+            .ingredient('E', Items.ENDER_PEARL)
+            .ingredient('B', Blocks.SMOOTH_BASALT)
+            .powders(cyan = 1, black = 2)
+            .time(600)
+            .criterion("can_use_moonstone_pedestal", AdvancementGottenCriterion.create(Identifier("spectrum:lategame/build_complex_pedestal_structure")))
+            .offerTo(exporter)
+
+        PigmentPedestalRecipeJsonBuilder(ItemRegistry.BINDING_TOOL).tier("complex").experience(2.0).id { withSuffixedPath("_inverted") }
+            .pattern("E  ", " B ", "  B")
+            .ingredient('E', Items.ENDER_PEARL)
+            .ingredient('B', Blocks.SMOOTH_BASALT)
+            .powders(cyan = 1, black = 2)
+            .time(600)
+            .criterion("can_use_moonstone_pedestal", AdvancementGottenCriterion.create(Identifier("spectrum:lategame/build_complex_pedestal_structure")))
+            .offerTo(exporter)
     }
 
     val materialForMachine = mutableMapOf<ItemConvertible, ItemConvertible>(BlockRegistry.BASALT_AUXILIARY_INK_SUPPLIER to SpectrumBlocks.POLISHED_BASALT, BlockRegistry.CALCITE_AUXILIARY_INK_SUPPLIER to SpectrumBlocks.POLISHED_CALCITE)
@@ -38,9 +74,9 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
     fun auxiliaryInkSupplierRecipe(inkSupplier: ItemConvertible, exporter: Consumer<RecipeJsonProvider>){
         PigmentPedestalRecipeJsonBuilder(inkSupplier).tier("complex").experience(4.0)
             .pattern("BMB", "PBP", "BBB")
-            .ingredient('B', Ingredient.ofItems(materialForMachine[inkSupplier]))
-            .ingredient('M', Ingredient.ofItems(SpectrumBlocks.MOONSTONE_STORAGE_BLOCK))
-            .ingredient('P', Ingredient.ofItems(SpectrumItems.PURPLE_PIGMENT))
+            .ingredient('B', materialForMachine[inkSupplier])
+            .ingredient('M', SpectrumBlocks.MOONSTONE_STORAGE_BLOCK)
+            .ingredient('P', SpectrumItems.PURPLE_PIGMENT)
             .powders(2,2,2,4,4)
             .time(1200)
             .criterion("can_use_moonstone_pedestal", AdvancementGottenCriterion.create(Identifier("spectrum:lategame/build_complex_pedestal_structure")))
@@ -51,11 +87,11 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
         val pigment = SpectrumItems::class.java.getDeclaredField("${color.name.uppercase()}_PIGMENT").get(null) as? Item
         val builder = PigmentPedestalRecipeJsonBuilder(ItemRegistry.enderFlasks[color.ordinal])
         builder.tier("complex").experience(8.0).pattern("OYO","PFP","OEO")
-            .ingredient('O', Ingredient.ofItems(Items.OBSIDIAN))
-            .ingredient('E', Ingredient.ofItems(SpectrumBlocks.RADIATING_ENDER))
-            .ingredient('P', Ingredient.ofItems(pigment))
-            .ingredient('F', Ingredient.ofItems(SpectrumItems.INK_FLASK))
-            .ingredient('Y', Ingredient.ofItems(Items.ENDER_EYE))
+            .ingredient('O', Items.OBSIDIAN)
+            .ingredient('E', SpectrumBlocks.RADIATING_ENDER)
+            .ingredient('P', pigment)
+            .ingredient('F', SpectrumItems.INK_FLASK)
+            .ingredient('Y', Items.ENDER_EYE)
             .powders(8, 2, 8, 16, 4)
             .time(1200)
             .criterion("gotten_radiating_ender", AdvancementGottenCriterion.create(Identifier("spectrum:get_radiating_ender")))
