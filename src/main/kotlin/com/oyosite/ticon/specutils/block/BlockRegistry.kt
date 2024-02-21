@@ -3,12 +3,12 @@ package com.oyosite.ticon.specutils.block
 import com.oyosite.ticon.specutils.SpectralUtilities
 import com.oyosite.ticon.specutils.block.auxilary_ink_supplier.AuxiliaryInkSupplierBlock
 import com.oyosite.ticon.specutils.block.auxilary_ink_supplier.AuxiliaryInkSupplierBlockEntity
-import com.oyosite.ticon.specutils.block.create_compat.CreateCompatBlocks
+//import com.oyosite.ticon.specutils.block.create_compat.CreateCompatBlocks
 import com.oyosite.ticon.specutils.block.moonstone_grow_lamp.MoonstoneGrowLampBlock
 import com.oyosite.ticon.specutils.util.ModRegistry
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.entity.FabricBlockEntityTypeBuilder
-import net.fabricmc.loader.api.FabricLoader
+//import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.block.Block
 import net.minecraft.item.BlockItem
 import net.minecraft.registry.Registries
@@ -31,7 +31,7 @@ object BlockRegistry: ModRegistry<Block> {
 
 
     operator fun invoke(){
-        if(FabricLoader.getInstance().isModLoaded("create")) CreateCompatBlocks()
+        //if(FabricLoader.getInstance().isModLoaded("create")) CreateCompatBlocks()
 
 
         BlockRegistry::class.declaredMemberProperties.filter { it.get(BlockRegistry) is Block }.forEach {
