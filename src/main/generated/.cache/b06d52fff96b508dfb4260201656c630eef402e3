@@ -1,0 +1,3 @@
+// 1.20.1	2024-02-20T19:01:17.604331007	Spectral Utilities/Tags for minecraft:block
+f1e787b11dd5191a0023b9acb1c297c2f9afd83e data/specutils/tags/blocks/ink_providers.json
+b4028af17e1acc0533371cc4419cb35cd0dc0688 data/specutils/tags/blocks/ink_receivers.json

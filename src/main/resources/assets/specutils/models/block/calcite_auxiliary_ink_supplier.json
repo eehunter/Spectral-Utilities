@@ -1,0 +1,7 @@
+{
+	"parent": "specutils:block/auxiliary_ink_supplier",
+	"textures": {
+		"1": "specutils:block/calcite_ink_supplier",
+		"particle": "specutils:block/calcite_ink_supplier"
+	}
+}

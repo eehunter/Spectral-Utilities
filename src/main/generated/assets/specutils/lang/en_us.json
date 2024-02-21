@@ -1,4 +1,9 @@
 {
+  "block.specutils.basalt_auxiliary_ink_supplier": "Basalt Auxiliary Ink Supplier",
+  "block.specutils.calcite_auxiliary_ink_supplier": "Calcite Auxiliary Ink Supplier",
+  "item.specutils.binding_tool": "Binding Tool",
+  "item.specutils.binding_tool.tooltip.linked_to": "Bound to x=%s, y=%s, z=%s.",
+  "item.specutils.binding_tool.tooltip.unlinked": "Not Bound.",
   "item.specutils.black_ender_flask": "Black Ender Flask",
   "item.specutils.black_ender_flask.tooltip": "§7Stores up to %d§7 Black Ink",
   "item.specutils.blue_ender_flask": "Blue Ender Flask",

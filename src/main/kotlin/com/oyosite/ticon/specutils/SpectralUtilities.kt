@@ -1,5 +1,6 @@
 package com.oyosite.ticon.specutils
 
+import com.oyosite.ticon.specutils.block.BlockRegistry
 import com.oyosite.ticon.specutils.item.EnderFlask
 import com.oyosite.ticon.specutils.item.ItemRegistry
 import net.fabricmc.api.ModInitializer
@@ -27,6 +28,7 @@ object SpectralUtilities: ModInitializer {
 
     override fun onInitialize() {
         ItemRegistry()
+        BlockRegistry()
 
 
 

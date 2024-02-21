@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack
 import net.minecraft.item.ItemUsageContext
 import net.minecraft.scoreboard.Scoreboard
 import net.minecraft.text.Text
+import net.minecraft.text.TextContent
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
@@ -24,15 +25,6 @@ import net.minecraft.world.World
 import java.util.*
 
 class EnderFlask(settings: FabricItemSettings, val color: InkColor): InkFlaskItem(settings, StaticEnderInkStorageComponent.inkCapacity) {
-
-
-    var ItemStack.owner: UUID?
-        get() = getSubNbt("ender_flask_data")?.takeIf { it.containsUuid("owner") }?.getUuid("owner")
-        set(value) = getOrCreateSubNbt("ender_flask_data").let{dat -> value?.let { dat.putUuid("owner", it) }?: dat.remove("owner") }
-
-    var ItemStack.ownerName: Text
-        get() = getSubNbt("ender_flask_data")?.takeIf { it.contains("owner_name") }?.getString("owner_name")?.let(Text.Serializer::fromJson)?:Text.translatable("item.specutils.ender_flask.tooltip.unknown_player")//.let{Text.nbt("", true, Optional.empty()){ _-> listOf(it).stream() }} ?: Text.translatable("item.ender_flask.tooltip.unknown_player")
-        set(value) { getOrCreateSubNbt("ender_flask_data").putString("owner_name", Text.Serializer.toJson(value)) }
 
     override fun getEnergyStorage(itemStack: ItemStack?): SingleInkStorage {
         val owner = itemStack?.owner?:return DUMMY_ENERGY_STORAGE
@@ -82,6 +74,17 @@ class EnderFlask(settings: FabricItemSettings, val color: InkColor): InkFlaskIte
     companion object{
         val DUMMY_ENERGY_STORAGE = SingleInkStorage(0)
         var scoreboard: Scoreboard? = null
+
+
+
+        var ItemStack.owner: UUID?
+            get() = getSubNbt("ender_flask_data")?.takeIf { it.containsUuid("owner") }?.getUuid("owner")
+            set(value) = getOrCreateSubNbt("ender_flask_data").let{dat -> value?.let { dat.putUuid("owner", it) }?: dat.remove("owner") }
+
+        var ItemStack.ownerName: Text
+            get() = getSubNbt("ender_flask_data")?.takeIf { it.contains("owner_name") }?.getString("owner_name")?.let(Text.Serializer::fromJson)?:Text.translatable("item.specutils.ender_flask.tooltip.unknown_player")//.let{Text.nbt("", true, Optional.empty()){ _-> listOf(it).stream() }} ?: Text.translatable("item.ender_flask.tooltip.unknown_player")
+            set(value) { if(value.content!=TextContent.EMPTY)getOrCreateSubNbt("ender_flask_data").putString("owner_name", Text.Serializer.toJson(value)) else getOrCreateSubNbt("ender_flask_data").remove("owner_name") }
+
     }
 
 

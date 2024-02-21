@@ -142,6 +142,7 @@ tasks {
 
     compileKotlin {
         kotlinOptions.jvmTarget = "17"
+        kotlinOptions.freeCompilerArgs+="-Xcontext-receivers"
     }
 
 }

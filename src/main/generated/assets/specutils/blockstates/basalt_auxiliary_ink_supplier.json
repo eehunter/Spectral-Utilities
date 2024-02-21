@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "specutils:block/basalt_auxiliary_ink_supplier"
+    }
+  }
+}

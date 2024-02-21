@@ -30,6 +30,12 @@
         "value": "com.oyosite.ticon.specutils.SpectralUtilities"
       }
     ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "com.oyosite.ticon.specutils.SpectralUtilitiesClient"
+      }
+    ],
     "cardinal-components": [
       {
         "adapter": "kotlin",

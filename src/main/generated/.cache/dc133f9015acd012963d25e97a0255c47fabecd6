@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-18T17:19:03.566205956	Spectral Utilities/Recipes
+// 1.20.1	2024-02-20T19:01:17.605614557	Spectral Utilities/Recipes
 e5870262fc3ede8ccbd9e3e6fc05a7e5217f0044 data/specutils/recipes/cyan_ender_flask.json
 63ea9b27b52f4437bbd83584228ce8c06a8a8d2d data/specutils/advancements/recipes/pedestal/green_ender_flask.json
 51c1ee0fd21625dea765d3c2c518781626ce4e28 data/specutils/recipes/orange_ender_flask.json
@@ -12,8 +12,8 @@ b13df22b8a75ef2b63fd1a5cb480fbd8f3799c45 data/specutils/advancements/recipes/ped
 c0d587cdbaeb8158fffd680ad059502d27557e84 data/specutils/advancements/recipes/pedestal/light_blue_ender_flask.json
 ecca9dd8adfd9ce7134cb1a2f91681fcf2a7a879 data/specutils/recipes/pink_ender_flask.json
 47255acc6fdc4dbf0b5295095a1651e8590eacf3 data/specutils/recipes/lime_ender_flask.json
-de537a48900763723b167d2890d28d2f35f342d9 data/specutils/recipes/green_ender_flask.json
 d92f9b156eaa982585fc985ab9b974da2d631b5f data/specutils/recipes/yellow_ender_flask.json
+de537a48900763723b167d2890d28d2f35f342d9 data/specutils/recipes/green_ender_flask.json
 d2179f5363ac58a3013745ae23225ac101a2513e data/specutils/advancements/recipes/pedestal/lime_ender_flask.json
 0f272d6f86f934d8490c8c918dc429651a7787a9 data/specutils/advancements/recipes/pedestal/pink_ender_flask.json
 135142e3883ec9b2ab3aae626ab67ad615c8a9a4 data/specutils/advancements/recipes/pedestal/light_gray_ender_flask.json
