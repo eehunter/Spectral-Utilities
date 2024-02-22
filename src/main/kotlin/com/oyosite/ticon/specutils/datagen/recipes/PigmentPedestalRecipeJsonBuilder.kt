@@ -18,12 +18,12 @@ import net.minecraft.registry.tag.TagKey
 import net.minecraft.util.Identifier
 import java.util.function.Consumer
 
-class PigmentPedestalRecipeJsonBuilder(result: ItemConvertible, count: Int = 1) {
+open class PigmentPedestalRecipeJsonBuilder(result: ItemConvertible, count: Int = 1) {
 
     val json = JsonObject()
 
     var id = Registries.ITEM.getId(result.asItem())
-    var advancementBuilder = Advancement.Builder.createUntelemetered()
+    var advancementBuilder: Advancement.Builder = Advancement.Builder.createUntelemetered()
     var advancementId: Identifier? = null
 
     init {

@@ -37,10 +37,10 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
     }
 
     fun moonstoneGrowLampRecipe(exporter: Consumer<RecipeJsonProvider>){
-        PigmentPedestalRecipeJsonBuilder(ItemRegistry.BINDING_TOOL).tier("complex").experience(2.0)
+        PigmentPedestalRecipeJsonBuilder(BlockRegistry.MOONSTONE_GROW_LAMP).tier("complex").experience(2.0)
             .pattern("BLB", "LCL", "BLB")
-            .ingredient('B', SpectrumBlocks.POLISHED_BASALT, SpectrumBlocks.POLISHED_CALCITE)
-            .ingredient('L', SpectrumBlocks.MOONSTONE_BASALT_LAMP, SpectrumBlocks.MOONSTONE_CALCITE_LAMP)
+            .ingredient('B', SpectrumBlocks.POLISHED_BASALT)//, SpectrumBlocks.POLISHED_CALCITE)
+            .ingredient('L', SpectrumBlocks.MOONSTONE_BASALT_LAMP)//, SpectrumBlocks.MOONSTONE_CALCITE_LAMP)
             .ingredient('C', SpectrumItems.MOONSTONE_CORE)
             .powders(1, 2, 4, 0, 4)
             .time(600)

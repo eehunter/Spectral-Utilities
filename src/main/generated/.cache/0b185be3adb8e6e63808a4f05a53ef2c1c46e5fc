@@ -1,9 +1,9 @@
-// 1.20.1	2024-02-21T13:47:42.9735184	Spectral Utilities/Model Definitions
+// 1.20.1	2024-02-21T19:39:56.748356095	Spectral Utilities/Model Definitions
 9e4e13558bbadc9f1e0deed1d962885cf2291e04 assets/specutils/models/block/moonstone_grow_lamp/overcharged.json
-5f3be794b5135333873e944c27a5be6505b9c2f2 assets/specutils/models/item/white_ender_flask.json
 4b3f9e3ef1e3e7bd22295c9b2522872d0660bb3e assets/specutils/blockstates/moonstone_grow_lamp.json
+5f3be794b5135333873e944c27a5be6505b9c2f2 assets/specutils/models/item/white_ender_flask.json
 09f88562ce6d2ee404d48c8fadf7aea1fd2d43c5 assets/specutils/models/item/lime_ender_flask.json
-6e2dd1d08d48498b09b2030a48ae11d9a519ffe0 assets/specutils/models/item/moonstone_grow_lamp.json
+b1ef0d1c3af47ef7fe35a74a54a89d697a3832ee assets/specutils/models/item/moonstone_grow_lamp.json
 dee9e83dc82fd5b602158e862dfd4eb6c9050df1 assets/specutils/models/item/magenta_ender_flask.json
 46ea1102fc795622f27bdf1f8e14a27b450bf655 assets/specutils/models/item/basalt_auxiliary_ink_supplier.json
 fbcd7904655e14811fabc0856e788e3ba9e6480f assets/specutils/models/item/pink_ender_flask.json

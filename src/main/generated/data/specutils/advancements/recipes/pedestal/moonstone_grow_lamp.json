@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "can_use_moonstone_pedestal": {
+      "conditions": {
+        "advancement_identifier": "spectrum:lategame/build_complex_pedestal_structure"
+      },
+      "trigger": "revelationary:advancement_gotten"
+    },
+    "obtained_moonstone_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "spectrum:moonstone_core"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "can_use_moonstone_pedestal"
+    ],
+    [
+      "obtained_moonstone_core"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

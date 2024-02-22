@@ -1,0 +1,28 @@
+{
+  "type": "spectrum:pedestal",
+  "black": 2,
+  "cyan": 1,
+  "experience": 2.0,
+  "key": {
+    "B": {
+      "item": "minecraft:smooth_basalt"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "magenta": 0,
+  "pattern": [
+    "  E",
+    " B ",
+    "B  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "specutils:binding_tool"
+  },
+  "tier": "complex",
+  "time": 600,
+  "white": 0,
+  "yellow": 0
+}

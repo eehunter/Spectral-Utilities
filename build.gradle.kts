@@ -140,6 +140,7 @@ tasks {
 
     compileJava {
         targetCompatibility = "17"
+        sourceCompatibility = "17"
     }
 
     compileKotlin {
