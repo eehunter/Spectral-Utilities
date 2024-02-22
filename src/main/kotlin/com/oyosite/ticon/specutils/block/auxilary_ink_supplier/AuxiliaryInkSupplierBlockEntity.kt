@@ -27,7 +27,7 @@ import java.util.*
 
 
 open class AuxiliaryInkSupplierBlockEntity(type: BlockEntityType<*>, pos: BlockPos, state: BlockState) : InWorldInteractionBlockEntity(type, pos, state, 1), PlayerOwned, LinkableBlockEntity {
-    constructor(pos: BlockPos, state: BlockState): this(BlockRegistry.AUXILIARY_INK_SUPPLIER_TYPE, pos, state)
+    constructor(pos: BlockPos, state: BlockState): this(BlockRegistry.BlockEntities.AUXILIARY_INK_SUPPLIER_TYPE, pos, state)
 
     private var ownerUUID: UUID? = null
     private var ownerName: Text? = null
