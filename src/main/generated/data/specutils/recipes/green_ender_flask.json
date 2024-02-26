@@ -26,6 +26,7 @@
     "PFP",
     "OEO"
   ],
+  "required_advancement": "specutils:recipes/pedestal/green_ender_flask",
   "result": {
     "count": 1,
     "item": "specutils:green_ender_flask"

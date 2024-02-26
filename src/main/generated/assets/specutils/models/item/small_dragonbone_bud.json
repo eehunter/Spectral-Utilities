@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "specutils:block/crystallarieum/small_dragonbone_bud"
+  }
+}

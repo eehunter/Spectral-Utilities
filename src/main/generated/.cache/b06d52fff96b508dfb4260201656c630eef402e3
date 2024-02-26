@@ -1,4 +1,7 @@
-// 1.20.1	2024-02-21T19:39:56.743466916	Spectral Utilities/Tags for minecraft:block
+// 1.20.1	2024-02-23T23:24:06.060267459	Spectral Utilities/Tags for minecraft:block
 acd5e40461d589b1b6c2d1788a21f30bc7e2fd5b data/specutils/tags/blocks/overcharge_blocks.json
 f1e787b11dd5191a0023b9acb1c297c2f9afd83e data/specutils/tags/blocks/ink_providers.json
 b4028af17e1acc0533371cc4419cb35cd0dc0688 data/specutils/tags/blocks/ink_receivers.json
+7a9de982647cebb406d61e180bbcb957ac0cf892 data/spectrum/tags/blocks/crystallarieum_growable_clusters.json
+7a9de982647cebb406d61e180bbcb957ac0cf892 data/spectrum/tags/blocks/crystal_apothecary_harvestable.json
+8b538c9aa5beceb12b9aa82023884badc28b19dc data/spectrum/tags/blocks/crystallarieum_growable_buds.json

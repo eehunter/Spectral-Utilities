@@ -13,5 +13,6 @@ object DatagenEntrypoint: DataGeneratorEntrypoint {
         pack.addProvider(::RecipeGen)
         pack.addProvider(::LanguageGen)
         pack.addProvider(::BlockTagGen)
+        pack.addProvider(::LootTableGen)
     }
 }

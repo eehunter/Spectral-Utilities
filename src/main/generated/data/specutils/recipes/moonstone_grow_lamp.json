@@ -20,6 +20,7 @@
     "LCL",
     "BLB"
   ],
+  "required_advancement": "specutils:recipes/pedestal/moonstone_grow_lamp",
   "result": {
     "count": 1,
     "item": "specutils:moonstone_grow_lamp"

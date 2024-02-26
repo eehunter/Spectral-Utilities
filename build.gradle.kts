@@ -99,6 +99,7 @@ dependencies {
     modImplementation("com.github.DaFuqs:DimensionalReverb:${property("dimensional_reverb_version")}")
 
     modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${property("rei_version")}")
+    //modRuntimeOnly("maven.modrinth:aC3cM3Vq:${property("mouse_tweaks_version")}")
 
 }
 

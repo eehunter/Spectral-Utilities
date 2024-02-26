@@ -20,6 +20,7 @@
     "PBP",
     "BBB"
   ],
+  "required_advancement": "specutils:recipes/pedestal/calcite_auxiliary_ink_supplier",
   "result": {
     "count": 1,
     "item": "specutils:calcite_auxiliary_ink_supplier"

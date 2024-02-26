@@ -1,6 +1,5 @@
 package com.oyosite.ticon.specutils.block.auxilary_ink_supplier
 
-import com.oyosite.ticon.specutils.block.MachineMaterial
 import de.dafuqs.spectrum.blocks.FluidLogging
 import de.dafuqs.spectrum.blocks.InWorldInteractionBlock
 import de.dafuqs.spectrum.energy.InkStorageItem

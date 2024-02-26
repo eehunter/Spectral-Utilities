@@ -1,0 +1,25 @@
+{
+  "name": "Moonstone Grow Lamp",
+  "advancement": "specutils:recipes/pedestal/moonstone_grow_lamp",
+  "icon": "specutils:moonstone_grow_lamp",
+  "category": "spectrum:magical_blocks_category",
+  "extra_recipe_mappings": {
+    "specutils:moonstone_grow_lamp": 0
+  },
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Moonstone Grow Lamp allows $(l:resources/jade_vines)Jade Vines$() to be grown in places where they can't access natural moonlight. Placing Moonstone Grow Lamp directly above a $(l:resources/jade_vines)Jade Vine's$() roots and powering it with redstone will enable the vine to grow."
+    },
+    {
+      "type": "spectrum:pedestal_crafting",
+      "title": "Pedestal Recipe",
+      "recipe": "specutils:moonstone_grow_lamp"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "spectrum:shimmerstone_block",
+      "text": "Placing a block of $(l:resources/shimmerstone)Shimmerstone$() directly on top of the Moonstone Grow Lamp will overcharge it, causing the $(l:resources/jade_vines)Jade Vine$() beneath to die, as if in sunlight."
+    }
+  ]
+}

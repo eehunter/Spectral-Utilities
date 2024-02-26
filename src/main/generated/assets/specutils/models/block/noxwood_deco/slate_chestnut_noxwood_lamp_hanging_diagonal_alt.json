@@ -1,0 +1,6 @@
+{
+  "parent": "spectrum:templates/noxwood_lamp_hanging_diagonal_alt",
+  "textures": {
+    "all": "specutils:block/noxwood_deco/slate_chestnut_noxwood_lamp"
+  }
+}

@@ -63,7 +63,10 @@ open class PigmentPedestalRecipeJsonBuilder(result: ItemConvertible, count: Int 
     fun offerTo(exporter: Consumer<RecipeJsonProvider>) = exporter.accept(PigmentPedestalRecipeJsonProvider(this))
 
     class PigmentPedestalRecipeJsonProvider(val builder: PigmentPedestalRecipeJsonBuilder): RecipeJsonProvider{
-        override fun serialize(json: JsonObject) = builder.json.entrySet().forEach { json.add(it.key, it.value) }
+        override fun serialize(json: JsonObject) {
+            builder.json.entrySet().forEach { json.add(it.key, it.value) }
+            json.addProperty("required_advancement", advancementId.toString())
+        }
 
 
         override fun getRecipeId(): Identifier = builder.id

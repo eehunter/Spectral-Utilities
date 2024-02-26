@@ -1,0 +1,45 @@
+{
+  "type": "spectrum:crystallarieum_growing",
+  "additional_recipe_manager_outputs": [
+    "spectrum:dragonbone_chunk"
+  ],
+  "catalysts": [
+    {
+      "consume_chance_per_second": 0.1,
+      "growth_acceleration_mod": 1.5,
+      "ingredient": {
+        "item": "minecraft:bone_meal"
+      },
+      "ink_consumption_mod": 0.707
+    },
+    {
+      "consume_chance_per_second": 0.01,
+      "growth_acceleration_mod": 7.5,
+      "ingredient": {
+        "item": "minecraft:bone_block"
+      },
+      "ink_consumption_mod": 0.707
+    },
+    {
+      "consume_chance_per_second": 0.0,
+      "growth_acceleration_mod": 0.5,
+      "ingredient": {
+        "item": "spectrum:dragonbone_chunk"
+      },
+      "ink_consumption_mod": 0.25
+    }
+  ],
+  "grows_without_catalyst": false,
+  "growth_stage_states": [
+    "specutils:small_dragonbone_bud",
+    "specutils:large_dragonbone_bud",
+    "specutils:dragonbone_cluster"
+  ],
+  "ingredient": {
+    "item": "spectrum:dragonbone_chunk"
+  },
+  "ink_color": "lime",
+  "ink_cost_tier": 4,
+  "required_advancement": "spectrum:recipes/crystallarieum/dragonbone_chunk",
+  "seconds_per_growth_stage": 240
+}

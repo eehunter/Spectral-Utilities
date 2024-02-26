@@ -26,6 +26,7 @@
     "PFP",
     "OEO"
   ],
+  "required_advancement": "specutils:recipes/pedestal/cyan_ender_flask",
   "result": {
     "count": 1,
     "item": "specutils:cyan_ender_flask"

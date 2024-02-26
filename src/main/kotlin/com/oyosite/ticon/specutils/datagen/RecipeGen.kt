@@ -3,10 +3,12 @@ package com.oyosite.ticon.specutils.datagen
 
 import com.google.gson.JsonObject
 import com.oyosite.ticon.specutils.block.BlockRegistry
+import com.oyosite.ticon.specutils.datagen.recipes.CrystallarieumRecipeJsonBuilder
 import com.oyosite.ticon.specutils.datagen.recipes.PigmentPedestalRecipeJsonBuilder
 import com.oyosite.ticon.specutils.item.ItemRegistry
 import de.dafuqs.revelationary.advancement_criteria.AdvancementGottenCriterion
 import de.dafuqs.spectrum.energy.color.InkColor
+import de.dafuqs.spectrum.energy.color.InkColors
 import de.dafuqs.spectrum.registries.SpectrumBlocks
 import de.dafuqs.spectrum.registries.SpectrumItems
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
@@ -34,6 +36,15 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
 
         bindingToolRecipe(exporter)
         moonstoneGrowLampRecipe(exporter)
+
+        CrystallarieumRecipeJsonBuilder(BlockRegistry.DRAGONBONE, 240, InkColors.LIME, 4)
+            .catalyst(Items.BONE_MEAL, 1.5, 0.707, 0.1)
+            .catalyst(Blocks.BONE_BLOCK, 7.5, 0.707, 0.01)
+            .catalyst(SpectrumItems.DRAGONBONE_CHUNK, 0.5, 0.25, 0.0)
+            .criterion("has_dragonbone", AdvancementGottenCriterion.create(Identifier("spectrum:lategame/break_cracked_dragonbone")))
+            .requiresAdvancement()
+            .offerTo(exporter)
+
     }
 
     fun moonstoneGrowLampRecipe(exporter: Consumer<RecipeJsonProvider>){

@@ -17,6 +17,7 @@
     " B ",
     "  B"
   ],
+  "required_advancement": "specutils:recipes/pedestal/binding_tool_inverted",
   "result": {
     "count": 1,
     "item": "specutils:binding_tool"

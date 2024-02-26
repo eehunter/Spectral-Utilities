@@ -11,5 +11,9 @@ object SpectralUtilitiesClient: ClientModInitializer {
 
     override fun onInitializeClient() {
         BlockEntityRendererRegistry.register(BlockRegistry.BlockEntities.AUXILIARY_INK_SUPPLIER_TYPE){ AuxiliaryInkSupplierBlockEntityRenderer() }
+
+
+
+        BlockRegistry.registerClient()
     }
 }

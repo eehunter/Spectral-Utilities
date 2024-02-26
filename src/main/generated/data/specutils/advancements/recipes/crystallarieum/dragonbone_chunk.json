@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "has_dragonbone": {
+      "conditions": {
+        "advancement_identifier": "spectrum:lategame/break_cracked_dragonbone"
+      },
+      "trigger": "revelationary:advancement_gotten"
+    }
+  },
+  "requirements": [
+    [
+      "has_dragonbone"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

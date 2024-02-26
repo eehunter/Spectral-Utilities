@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "alt=false,diagonal=false,hanging=false": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp"
+    },
+    "alt=false,diagonal=false,hanging=true": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_hanging"
+    },
+    "alt=false,diagonal=true,hanging=false": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_diagonal"
+    },
+    "alt=false,diagonal=true,hanging=true": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_hanging_diagonal"
+    },
+    "alt=true,diagonal=false,hanging=false": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_alt"
+    },
+    "alt=true,diagonal=false,hanging=true": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_hanging_alt"
+    },
+    "alt=true,diagonal=true,hanging=false": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_diagonal_alt"
+    },
+    "alt=true,diagonal=true,hanging=true": {
+      "model": "specutils:block/noxwood_deco/ebony_slate_noxwood_lamp_hanging_diagonal_alt"
+    }
+  }
+}

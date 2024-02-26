@@ -1,0 +1,6 @@
+{
+  "parent": "spectrum:templates/noxwood_lamp_hanging_diagonal",
+  "textures": {
+    "all": "specutils:block/noxwood_deco/slate_ebony_noxwood_lamp"
+  }
+}
