@@ -21,7 +21,7 @@ import kotlin.reflect.full.declaredMemberProperties
 class ModelGen(output: FabricDataOutput) : FabricModelProvider(output) {
     override fun generateBlockStateModels(blockStateModelGenerator: BlockStateModelGenerator) {
         SpectralUtilities.info("Generating Block Models...")
-        //blockStateModelGenerator.registerSimpleCubeAll(BlockRegistry.CALCITE_AUXILIARY_INK_SUPPLIER)
+
         blockStateModelGenerator.registerSimpleState(BlockRegistry.CALCITE_AUXILIARY_INK_SUPPLIER)
         blockStateModelGenerator.registerSimpleState(BlockRegistry.BASALT_AUXILIARY_INK_SUPPLIER)
 
@@ -83,11 +83,6 @@ class ModelGen(output: FabricDataOutput) : FabricModelProvider(output) {
             CRYSTALLARIEUM_FARMABLE.upload(id, TextureMap.cross(id), modelCollector)
             Models.GENERATED.upload(ModelIds.getItemModelId(it.asItem()), TextureMap.layer0(id), this.modelCollector)
         }
-
-
-        //registerTintableCross(mat.smallBud, BlockStateModelGenerator.TintType.NOT_TINTED)
-        //registerTintableCross(mat.largeBud, BlockStateModelGenerator.TintType.NOT_TINTED)
-        //registerTintableCross(mat.cluster, BlockStateModelGenerator.TintType.NOT_TINTED)
     }
 
     fun BlockStateModelGenerator.registerMoonstoneGrowLampBlock(){

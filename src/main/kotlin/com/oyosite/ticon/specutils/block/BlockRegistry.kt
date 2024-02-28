@@ -3,6 +3,7 @@ package com.oyosite.ticon.specutils.block
 //import com.oyosite.ticon.specutils.block.create_compat.CreateCompatBlocks
 //import net.fabricmc.loader.api.FabricLoader
 import com.oyosite.ticon.specutils.SpectralUtilities
+import com.oyosite.ticon.specutils.block.BlockRegistry.BlockEntities.AUXILIARY_INK_SUPPLIER_TYPE
 import com.oyosite.ticon.specutils.block.CrystallarieumMaterial.Companion.register
 import com.oyosite.ticon.specutils.block.auxilary_ink_supplier.AuxiliaryInkSupplierBlock
 import com.oyosite.ticon.specutils.block.auxilary_ink_supplier.AuxiliaryInkSupplierBlockEntity
@@ -80,6 +81,8 @@ object BlockRegistry: ModRegistry<Block> {
         dmp.filter { it.get(BlockRegistry) is CrystallarieumMaterial }.let{it as List<KProperty1<BlockRegistry,CrystallarieumMaterial>>}.forEach{it.register()}
 
         NoxwoodDeco()
+
+        AUXILIARY_INK_SUPPLIER_TYPE
     }
 
     private val Block.itemSettings: FabricItemSettings get() = (this as? BlockWithItemSettings)?.itemSettings ?: FabricItemSettings()
