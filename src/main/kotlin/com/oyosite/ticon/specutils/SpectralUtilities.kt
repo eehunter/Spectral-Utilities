@@ -39,5 +39,8 @@ object SpectralUtilities: ModInitializer {
         //The second event may be redundant, but I want to be safe.
         ServerLifecycleEvents.SERVER_STARTING.register{ EnderFlask.scoreboard = it.scoreboard}
         ServerLifecycleEvents.END_DATA_PACK_RELOAD.register{server, _, _ -> EnderFlask.scoreboard = server.scoreboard}
+
+        // TODO: Add items to item groups
+        // ItemSubGroupEvents.modifyEntriesEvent(ItemGroupIDs.SUBTAB_ENERGY).register(...)
     }
 }
