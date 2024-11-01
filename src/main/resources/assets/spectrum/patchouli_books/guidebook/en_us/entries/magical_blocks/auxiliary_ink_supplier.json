@@ -10,12 +10,13 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The Auxiliary Ink Supplier allows an $(l:magic/ink)Ink$()-containing item to be connected to a machine as though it were inserted into that machine's $(l:magic/ink)Ink$() storage slot. The primary use-case for this is automatically supplying a $(magical_blocks/cinderhearth)Cinderhearth$() with multiple different colors of $(l:magic/ink)Ink$()."
+      "text": "The Auxiliary Ink Supplier allows an $(l:magic/ink)Ink$()-containing item to be connected to a machine as though it were inserted into that machine's $(l:magic/ink)Ink$() storage slot. The primary use-case for this is automatically supplying a $(l:magical_blocks/cinderhearth)Cinderhearth$() with multiple different colors of $(l:magic/ink)Ink$()."
     },
     {
       "type": "spectrum:pedestal_crafting",
       "title": "Pedestal Recipe",
-      "recipe": "specutils:calcite_auxiliary_ink_supplier"
+      "recipe": "specutils:calcite_auxiliary_ink_supplier",
+      "text": "Has a max distance of 3 blocks. Use a Binding Tool to link it to its target."
     },
     {
       "type": "spectrum:pedestal_crafting",
