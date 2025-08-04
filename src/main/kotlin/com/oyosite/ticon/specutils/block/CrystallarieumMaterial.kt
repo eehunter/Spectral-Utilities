@@ -2,9 +2,7 @@ package com.oyosite.ticon.specutils.block
 
 import com.oyosite.ticon.specutils.SpectralUtilities
 import com.oyosite.ticon.specutils.ink.Namespaced
-import de.dafuqs.spectrum.blocks.crystallarieum.CrystallarieumGrowableBlock
 import de.dafuqs.spectrum.registries.SpectrumItems
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
@@ -57,8 +55,8 @@ class CrystallarieumMaterial(
 
         fun pureItem(item: ItemConvertible, register: Boolean = false) = apply{pureItem = item.asItem(); registerPureItem = register}
 
-        fun createPureItem(settings: FabricItemSettings) = apply{pureItem = Item(settings)}
-        fun createPureItem(settings: FabricItemSettings.()->Unit) = createPureItem(FabricItemSettings().apply(settings))
+        fun createPureItem(settings: Item.Settings) = apply{pureItem = Item(settings)}
+        fun createPureItem(settings: Item.Settings.()->Unit) = createPureItem(FabricItemSettings().apply(settings))
 
 
 
@@ -88,13 +86,13 @@ class CrystallarieumMaterial(
                     "large_${matName}_bud" to largeBud,
                     "${matName}_cluster" to cluster
                 ).forEach {(id, block)->
-                    val identifier = Identifier(if(this@T is Namespaced)this@T.namespace else SpectralUtilities.MODID, id)
+                    val identifier = Identifier.tryParse(if(this@T is Namespaced)this@T.namespace else SpectralUtilities.MODID, id)
                     Registry.register(Registries.BLOCK, identifier, block)
                     Registry.register(Registries.ITEM, identifier, BlockItem(block, SpectrumItems.IS.of()))
                 }
             }
             if(mat.registerPureItem)mat.pureItem?.let{ pure ->
-                val identifier = Identifier(if(this@T is Namespaced)this@T.namespace else SpectralUtilities.MODID, "pure_$matName")
+                val identifier = Identifier.tryParse(if(this@T is Namespaced)this@T.namespace else SpectralUtilities.MODID, "pure_$matName")
                 Registry.register(Registries.ITEM, identifier, pure)
             }
 

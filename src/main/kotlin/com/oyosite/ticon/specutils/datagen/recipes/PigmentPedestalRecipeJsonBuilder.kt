@@ -2,13 +2,9 @@ package com.oyosite.ticon.specutils.datagen.recipes
 
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
-import de.dafuqs.spectrum.recipe.SpectrumRecipeTypes
-import de.dafuqs.spectrum.recipe.pedestal.PedestalRecipe
-import de.dafuqs.spectrum.recipe.pedestal.PedestalRecipeSerializer
-import de.dafuqs.spectrum.recipe.pedestal.ShapedPedestalRecipeSerializer
+import de.dafuqs.spectrum.registries.SpectrumRecipeSerializers
 import net.minecraft.advancement.Advancement
 import net.minecraft.advancement.criterion.CriterionConditions
-import net.minecraft.data.server.recipe.RecipeJsonProvider
 import net.minecraft.item.Item
 import net.minecraft.item.ItemConvertible
 import net.minecraft.recipe.Ingredient
@@ -71,7 +67,7 @@ open class PigmentPedestalRecipeJsonBuilder(result: ItemConvertible, count: Int 
 
         override fun getRecipeId(): Identifier = builder.id
 
-        override fun getSerializer(): RecipeSerializer<*> = SpectrumRecipeTypes.SHAPED_PEDESTAL_RECIPE_SERIALIZER
+        override fun getSerializer(): RecipeSerializer<*> = SpectrumRecipeSerializers.SHAPED_PEDESTAL_RECIPE_SERIALIZER
 
         override fun toAdvancementJson(): JsonObject = builder.advancementBuilder.toJson()
 

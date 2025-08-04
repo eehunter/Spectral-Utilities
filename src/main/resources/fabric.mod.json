@@ -54,14 +54,14 @@
   },
 
   "depends": {
-    "fabricloader": ">=0.15.0",
+    "fabricloader": "*",
     "fabric-api": "*",
     "minecraft": "~${minecraft_version}",
-    "java": ">=17",
-    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+    "java": ">=21",
+    "fabric-language-kotlin": ">=${fabric_kotlin_version}",
+    "spectrum": "*"
   },
   "suggests": {
-    "fabricloader": ">=${loader_version}",
-    "create": ">=0.5.1"
+
   }
 }

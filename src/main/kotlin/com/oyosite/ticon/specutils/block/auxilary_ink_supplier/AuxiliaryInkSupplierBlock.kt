@@ -1,8 +1,8 @@
 package com.oyosite.ticon.specutils.block.auxilary_ink_supplier
 
+import de.dafuqs.spectrum.api.energy.InkStorageItem
 import de.dafuqs.spectrum.blocks.FluidLogging
 import de.dafuqs.spectrum.blocks.InWorldInteractionBlock
-import de.dafuqs.spectrum.energy.InkStorageItem
 import net.minecraft.block.Block
 import net.minecraft.block.BlockRenderType
 import net.minecraft.block.BlockState
@@ -21,7 +21,6 @@ import net.minecraft.util.shape.VoxelShape
 import net.minecraft.util.shape.VoxelShapes
 import net.minecraft.world.BlockView
 import net.minecraft.world.World
-import kotlin.math.max
 
 @Suppress("OVERRIDE_DEPRECATION")
 open class AuxiliaryInkSupplierBlock(settings: Settings) : InWorldInteractionBlock(settings.luminance(::luminance)) {

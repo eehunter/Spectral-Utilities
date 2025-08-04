@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider
 import net.minecraft.block.Block
 import net.minecraft.item.Item
 import java.util.*
-import kotlin.reflect.full.declaredMemberProperties
 
 class LanguageGen(output: FabricDataOutput): FabricLanguageProvider(output) {
 

@@ -1,28 +1,21 @@
 package com.oyosite.ticon.specutils.datagen
 
 
-import com.google.gson.JsonObject
 import com.oyosite.ticon.specutils.block.BlockRegistry
 import com.oyosite.ticon.specutils.datagen.recipes.CrystallarieumRecipeJsonBuilder
 import com.oyosite.ticon.specutils.datagen.recipes.PigmentPedestalRecipeJsonBuilder
 import com.oyosite.ticon.specutils.item.ItemRegistry
 import de.dafuqs.revelationary.advancement_criteria.AdvancementGottenCriterion
-import de.dafuqs.spectrum.energy.color.InkColor
-import de.dafuqs.spectrum.energy.color.InkColors
+import de.dafuqs.spectrum.api.energy.color.InkColors
 import de.dafuqs.spectrum.registries.SpectrumBlocks
 import de.dafuqs.spectrum.registries.SpectrumItems
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider
-import net.minecraft.advancement.AdvancementCriterion
-import net.minecraft.advancement.criterion.CriterionConditions
 import net.minecraft.advancement.criterion.InventoryChangedCriterion
-import net.minecraft.block.Block
 import net.minecraft.block.Blocks
-import net.minecraft.data.server.recipe.RecipeJsonProvider
 import net.minecraft.item.Item
 import net.minecraft.item.ItemConvertible
 import net.minecraft.item.Items
-import net.minecraft.recipe.Ingredient
 import net.minecraft.util.DyeColor
 import net.minecraft.util.Identifier
 import java.util.function.Consumer
@@ -86,7 +79,7 @@ class RecipeGen(output: FabricDataOutput) : FabricRecipeProvider(output) {
         PigmentPedestalRecipeJsonBuilder(inkSupplier).tier("complex").experience(4.0)
             .pattern("BMB", "PBP", "BBB")
             .ingredient('B', materialForMachine[inkSupplier])
-            .ingredient('M', SpectrumBlocks.MOONSTONE_STORAGE_BLOCK)
+            .ingredient('M', SpectrumBlocks.POLISHED_MOONSTONE)
             .ingredient('P', SpectrumItems.PURPLE_PIGMENT)
             .powders(2,2,2,4,4)
             .time(1200)

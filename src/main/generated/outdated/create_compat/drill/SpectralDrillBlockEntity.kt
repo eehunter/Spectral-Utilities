@@ -1,4 +1,4 @@
-package com.oyosite.ticon.specutils.block.create_compat.drill
+package outdated.create_compat.drill
 
 import com.simibubi.create.content.kinetics.base.BlockBreakingKineticBlockEntity
 import net.minecraft.block.BlockState

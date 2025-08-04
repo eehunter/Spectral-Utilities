@@ -1,7 +1,7 @@
 package com.oyosite.ticon.specutils.block
 
 import com.oyosite.ticon.specutils.SpectralUtilities
-import de.dafuqs.spectrum.blocks.furniture.FlexLanternBlock
+import de.dafuqs.spectrum.blocks.decoration.FlexLanternBlock
 import de.dafuqs.spectrum.registries.SpectrumBlocks
 import de.dafuqs.spectrum.registries.SpectrumItems.IS
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings

@@ -1,8 +1,9 @@
 package com.oyosite.ticon.specutils.block
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.minecraft.item.Item
+
 
 interface BlockWithItemSettings {
 
-    val itemSettings: FabricItemSettings?
+    val itemSettings: Item.Settings?
 }

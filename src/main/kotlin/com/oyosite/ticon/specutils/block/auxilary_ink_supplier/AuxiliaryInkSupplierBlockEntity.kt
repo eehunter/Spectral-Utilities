@@ -6,13 +6,14 @@ import com.oyosite.ticon.specutils.block.LinkableBlockEntity
 import com.oyosite.ticon.specutils.item.EnderFlask
 import com.oyosite.ticon.specutils.item.EnderFlask.Companion.owner
 import com.oyosite.ticon.specutils.item.EnderFlask.Companion.ownerName
+import de.dafuqs.spectrum.api.block.PlayerOwned
+import de.dafuqs.spectrum.api.energy.InkStorage
+import de.dafuqs.spectrum.api.energy.InkStorageBlockEntity
+import de.dafuqs.spectrum.api.energy.InkStorageItem
+import de.dafuqs.spectrum.api.energy.color.InkColor
+import de.dafuqs.spectrum.api.energy.color.InkColors
 import de.dafuqs.spectrum.blocks.InWorldInteractionBlockEntity
 import de.dafuqs.spectrum.blocks.energy.ColorPickerBlockEntity
-import de.dafuqs.spectrum.energy.InkStorage
-import de.dafuqs.spectrum.energy.InkStorageBlockEntity
-import de.dafuqs.spectrum.energy.InkStorageItem
-import de.dafuqs.spectrum.energy.color.InkColor
-import de.dafuqs.spectrum.interfaces.PlayerOwned
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntityType
 import net.minecraft.entity.player.PlayerEntity
@@ -93,7 +94,7 @@ open class AuxiliaryInkSupplierBlockEntity(type: BlockEntityType<*>, pos: BlockP
             var transferredAmount = 0L
             var colorPredicate: (InkColor)->Boolean = {true}
             if(targetBe is ColorPickerBlockEntity) colorPredicate = {targetBe.selectedColor?.equals(it)?:true}
-            for(inkColor in InkColor.all().filter(colorPredicate)) transferredAmount+=InkStorage.transferInk(targetStorage, inkStorage, inkColor)
+            for(inkColor in InkColors.all().filter(colorPredicate)) transferredAmount+=InkStorage.transferInk(targetStorage, inkStorage, inkColor)
             if(transferredAmount>0)storageItem.setEnergyStorage(heldStack, inkStorage)
 
             targetBe.setInkDirty()
