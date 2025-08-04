@@ -1,4 +1,4 @@
-package com.oyosite.ticon.specutils.block.create_compat.drill
+package outdated.create_compat.drill
 
 import com.simibubi.create.AllBlocks
 import com.simibubi.create.AllShapes
@@ -42,7 +42,7 @@ import kotlin.math.abs
 import kotlin.math.min
 
 @Suppress("OVERRIDE_DEPRECATION")
-class SpectralDrillBlock(properties: Settings) : DirectionalKineticBlock(properties), IBE<SpectralDrillBlockEntity> {
+class SpectralDrillBlock(properties: Settings) : DirectionalKineticBlock(properties), IBE<outdated.create_compat.drill.SpectralDrillBlockEntity> {
 
     init{
         defaultState = super.getDefaultState().with(Properties.WATERLOGGED, false)
@@ -52,7 +52,7 @@ class SpectralDrillBlock(properties: Settings) : DirectionalKineticBlock(propert
         if (entityIn is ItemEntity) return
         if (!Box(pos).contract(.1).intersects(entityIn.boundingBox)) return
 
-        withBlockEntityDo(worldIn, pos) { be: SpectralDrillBlockEntity ->
+        withBlockEntityDo(worldIn, pos) { be: outdated.create_compat.drill.SpectralDrillBlockEntity ->
             if (be.speed == 0f) return@withBlockEntityDo
             entityIn.damage(CreateDamageSources.drill(worldIn), getDamage(be.speed).toFloat())//Perhaps the damage type should be different here?
         }
@@ -99,9 +99,9 @@ class SpectralDrillBlock(properties: Settings) : DirectionalKineticBlock(propert
         return MathHelper.clamp(sub1 + sub2 + sub3, 1.0, 10.0)
     }
 
-    override fun getBlockEntityClass(): Class<SpectralDrillBlockEntity> = SpectralDrillBlockEntity::class.java
+    override fun getBlockEntityClass(): Class<outdated.create_compat.drill.SpectralDrillBlockEntity> = outdated.create_compat.drill.SpectralDrillBlockEntity::class.java
 
-    override fun getBlockEntityType(): BlockEntityType<out SpectralDrillBlockEntity> {
+    override fun getBlockEntityType(): BlockEntityType<out outdated.create_compat.drill.SpectralDrillBlockEntity> {
         TODO("Not yet implemented")
     }
 

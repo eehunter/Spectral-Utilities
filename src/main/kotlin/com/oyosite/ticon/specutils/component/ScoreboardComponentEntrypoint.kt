@@ -1,9 +1,7 @@
 package com.oyosite.ticon.specutils.component
 
-import dev.onyxstudios.cca.api.v3.component.ComponentRegistry
-import dev.onyxstudios.cca.api.v3.scoreboard.ScoreboardComponentFactoryRegistry
-import dev.onyxstudios.cca.api.v3.scoreboard.ScoreboardComponentInitializer
 import net.minecraft.util.Identifier
+import org.ladysnake.cca.api.v3.component.ComponentRegistry
 
 object ScoreboardComponentEntrypoint : ScoreboardComponentInitializer{
 

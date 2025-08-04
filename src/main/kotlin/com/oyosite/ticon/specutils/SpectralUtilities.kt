@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory
 object SpectralUtilities: ModInitializer {
 
     const val MODID = "specutils"
-    fun id(id: String) = if(id.contains(":"))Identifier(id) else Identifier(MODID, id)
+    fun id(id: String) = if(id.contains(":"))Identifier.tryParse(id) else Identifier.tryParse(MODID, id)
 
     val LOGGER: Logger = LoggerFactory.getLogger("Spectrum")
 

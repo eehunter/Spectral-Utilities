@@ -3,28 +3,25 @@ package com.oyosite.ticon.specutils.item
 import com.oyosite.ticon.specutils.component.ScoreboardComponentEntrypoint
 import com.oyosite.ticon.specutils.component.StaticEnderInkStorageComponent
 import com.oyosite.ticon.specutils.ink.ColorLockedInkStorage
-import de.dafuqs.spectrum.energy.InkStorage
-import de.dafuqs.spectrum.energy.color.InkColor
-import de.dafuqs.spectrum.energy.storage.SingleInkStorage
+import de.dafuqs.spectrum.api.energy.InkStorage
+import de.dafuqs.spectrum.api.energy.color.InkColor
+import de.dafuqs.spectrum.api.energy.storage.SingleInkStorage
 import de.dafuqs.spectrum.items.energy.InkFlaskItem
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings
-import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.Entity
 import net.minecraft.entity.player.PlayerEntity
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.item.ItemUsageContext
 import net.minecraft.scoreboard.Scoreboard
 import net.minecraft.text.Text
 import net.minecraft.text.TextContent
-import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 import java.util.*
 
-class EnderFlask(settings: FabricItemSettings, val color: InkColor): InkFlaskItem(settings, StaticEnderInkStorageComponent.inkCapacity) {
+class EnderFlask(settings: Item.Settings, val color: InkColor): InkFlaskItem(settings, StaticEnderInkStorageComponent.inkCapacity) {
 
     override fun getEnergyStorage(itemStack: ItemStack?): SingleInkStorage {
         val owner = itemStack?.owner?:return DUMMY_ENERGY_STORAGE

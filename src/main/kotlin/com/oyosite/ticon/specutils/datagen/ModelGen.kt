@@ -6,7 +6,7 @@ import com.oyosite.ticon.specutils.block.CrystallarieumMaterial
 import com.oyosite.ticon.specutils.block.NoxwoodDeco
 import com.oyosite.ticon.specutils.block.moonstone_grow_lamp.MoonstoneGrowLampBlock
 import com.oyosite.ticon.specutils.item.ItemRegistry
-import de.dafuqs.spectrum.blocks.furniture.FlexLanternBlock
+import de.dafuqs.spectrum.blocks.decoration.FlexLanternBlock
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider
 import net.minecraft.block.Block
@@ -14,7 +14,6 @@ import net.minecraft.data.client.*
 import net.minecraft.registry.Registries
 import net.minecraft.util.Identifier
 import java.util.*
-import kotlin.reflect.full.declaredMemberProperties
 
 
 @Suppress("MemberVisibilityCanBePrivate", "PropertyName")

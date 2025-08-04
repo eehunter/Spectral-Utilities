@@ -1,8 +1,6 @@
 package com.oyosite.ticon.specutils.item
 
 import com.oyosite.ticon.specutils.block.LinkableBlockEntity
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings
-import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
@@ -15,7 +13,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
 class BindingTool(settings: Settings) : Item(settings) {
-    constructor(settings: FabricItemSettings.()->Unit): this(FabricItemSettings().apply(settings))
+    constructor(settings: Item.Settings.()->Unit): this(Item.Settings().apply(settings))
 
     var ItemStack.target: BlockPos?
         get() = getSubNbt("target_data")?.run{BlockPos(getInt("x"),getInt("y"),getInt("z"))}

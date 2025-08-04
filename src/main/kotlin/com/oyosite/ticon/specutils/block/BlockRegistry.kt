@@ -1,7 +1,5 @@
 package com.oyosite.ticon.specutils.block
 
-//import com.oyosite.ticon.specutils.block.create_compat.CreateCompatBlocks
-//import net.fabricmc.loader.api.FabricLoader
 import com.oyosite.ticon.specutils.SpectralUtilities
 import com.oyosite.ticon.specutils.block.BlockRegistry.BlockEntities.AUXILIARY_INK_SUPPLIER_TYPE
 import com.oyosite.ticon.specutils.block.CrystallarieumMaterial.Companion.register
@@ -14,16 +12,15 @@ import de.dafuqs.spectrum.registries.SpectrumItems
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.entity.FabricBlockEntityTypeBuilder
 import net.minecraft.block.Block
 import net.minecraft.block.entity.BlockEntityType
 import net.minecraft.client.render.RenderLayer
 import net.minecraft.item.BlockItem
+import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import kotlin.reflect.KProperty1
-import kotlin.reflect.full.declaredMemberProperties
 
 
 /**
@@ -85,5 +82,5 @@ object BlockRegistry: ModRegistry<Block> {
         AUXILIARY_INK_SUPPLIER_TYPE
     }
 
-    private val Block.itemSettings: FabricItemSettings get() = (this as? BlockWithItemSettings)?.itemSettings ?: FabricItemSettings()
+    private val Block.itemSettings: Item.Settings get() = (this as? BlockWithItemSettings)?.itemSettings ?: Item.Settings()
 }

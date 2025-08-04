@@ -1,7 +1,7 @@
 package com.oyosite.ticon.specutils.ink
 
-import de.dafuqs.spectrum.energy.color.InkColor
-import de.dafuqs.spectrum.energy.storage.SingleInkStorage
+import de.dafuqs.spectrum.api.energy.color.InkColor
+import de.dafuqs.spectrum.api.energy.storage.SingleInkStorage
 import de.dafuqs.spectrum.helpers.Support
 import net.minecraft.text.Text
 
@@ -20,13 +20,11 @@ class ColorLockedInkStorage(capacity: Long, private val color: InkColor, amount:
         super.setEnergy(singleColorMap, total)
     }
 
-    override fun addTooltip(tooltip: MutableList<Text>?, includeHeader: Boolean) {
-        if (includeHeader) {
-            tooltip!!.add(Text.translatable(
-                "item.specutils.${color.dyeColor.name.lowercase()}_ender_flask.tooltip",
-                *arrayOf<Any>(Support.getShortenedNumberString(this.maxEnergy))
-            ))
-        }
+    override fun addTooltip(tooltip: MutableList<Text>?) {
+        tooltip!!.add(Text.translatable(
+            "item.specutils.${color.dyeColor.name.lowercase()}_ender_flask.tooltip",
+            *arrayOf<Any>(Support.getShortenedNumberString(this.maxEnergy))
+        ))
 
         if (this.storedEnergy > 0L) {
             tooltip!!.add(Text.translatable(

@@ -3,11 +3,10 @@ package com.oyosite.ticon.specutils.datagen.recipes
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.oyosite.ticon.specutils.block.CrystallarieumMaterial
-import de.dafuqs.spectrum.energy.color.InkColor
-import de.dafuqs.spectrum.recipe.SpectrumRecipeTypes
+import de.dafuqs.spectrum.api.energy.color.InkColor
+import de.dafuqs.spectrum.registries.SpectrumRecipeSerializers
 import net.minecraft.advancement.Advancement
 import net.minecraft.advancement.criterion.CriterionConditions
-import net.minecraft.data.server.recipe.RecipeJsonProvider
 import net.minecraft.item.Item
 import net.minecraft.item.ItemConvertible
 import net.minecraft.recipe.Ingredient
@@ -84,7 +83,7 @@ open class CrystallarieumRecipeJsonBuilder(val material: CrystallarieumMaterial,
 
         override fun getRecipeId(): Identifier = builder.id
 
-        override fun getSerializer(): RecipeSerializer<*> = SpectrumRecipeTypes.CRYSTALLARIEUM_RECIPE_SERIALIZER
+        override fun getSerializer(): RecipeSerializer<*> = SpectrumRecipeSerializers.CRYSTALLARIEUM_RECIPE_SERIALIZER
 
         override fun toAdvancementJson(): JsonObject = builder.advancementBuilder.toJson()
 

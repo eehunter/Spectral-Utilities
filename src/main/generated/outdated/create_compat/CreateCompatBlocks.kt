@@ -1,4 +1,4 @@
-package com.oyosite.ticon.specutils.block.create_compat
+package outdated.create_compat
 
 object CreateCompatBlocks {
 

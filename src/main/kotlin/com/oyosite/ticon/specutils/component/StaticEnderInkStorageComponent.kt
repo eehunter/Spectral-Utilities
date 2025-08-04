@@ -1,16 +1,14 @@
 package com.oyosite.ticon.specutils.component
 
 import com.oyosite.ticon.specutils.ink.ColorLockedInkStorage
-import de.dafuqs.spectrum.energy.InkStorage
-import de.dafuqs.spectrum.energy.color.InkColor
-import de.dafuqs.spectrum.energy.storage.SingleInkStorage
-import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent
+import de.dafuqs.spectrum.api.energy.color.InkColor
+import de.dafuqs.spectrum.api.energy.storage.SingleInkStorage
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.scoreboard.Scoreboard
 import net.minecraft.server.MinecraftServer
 import net.minecraft.util.DyeColor
-import net.minecraft.world.WorldProperties
-import java.util.UUID
+import org.ladysnake.cca.api.v3.component.sync.AutoSyncedComponent
+import java.util.*
 
 class StaticEnderInkStorageComponent() : AutoSyncedComponent {
     constructor(scoreboard: Scoreboard, server: MinecraftServer?): this()
@@ -38,7 +36,7 @@ class StaticEnderInkStorageComponent() : AutoSyncedComponent {
         PLAYER_ENDER_INK_STORAGE.forEach { player, inkData ->
             val playerTag = NbtCompound()
             inkData.forEachIndexed { i, it ->
-                it?.getEnergy(InkColor.of(DyeColor.byId(i)))?.run{playerTag.putLong(i.toString(), this)}
+                it?.getEnergy(InkColor.ofDyeColor(DyeColor.byId(i)))?.run{playerTag.putLong(i.toString(), this)}
             }
             tag.put(player.toString(), playerTag)
         }
