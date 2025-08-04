@@ -41,6 +41,7 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+    maven{setUrl("https://maven.is-immensely.gay/releases")}
     maven{setUrl("https://maven.shedaniel.me/")}
     maven{setUrl("https://maven.terraformersmc.com/")}
     maven{setUrl("https://maven.blamejared.com")}
@@ -53,14 +54,16 @@ repositories {
     maven{setUrl("https://maven.cafeteria.dev/releases")}
     maven{setUrl("https://maven.tterrag.com/");content { includeGroup("com.jozufozu.flywheel") }}
     maven{setUrl("https://maven.ladysnake.org/releases")}
+    maven {setUrl("https://maven.nucleoid.xyz/")} // Common Protection API
+    maven {setUrl("https://dl.cloudsmith.io/public/klikli-dev/mods/maven/")} // Modonomicon
     //maven{setUrl("")}
 }
 
 dependencies {
-    implementation ("org.jetbrains:annotations:24.0.1")
+    implementation("org.jetbrains:annotations:24.0.1")
     implementation("org.jgrapht:jgrapht-core:1.5.1")
     implementation("org.jheaps:jheaps:0.13")
-    compileOnly ("com.demonwav.mcdev:annotations:1.0")
+    compileOnly("com.demonwav.mcdev:annotations:1.0")
 
     minecraft("com.mojang:minecraft:${property("minecraft_version")}")
     mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
@@ -69,38 +72,38 @@ dependencies {
     modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
-    modImplementation("maven.modrinth:Spectrum:${property("spectrum_version")}")
+    modImplementation("de.dafuqs:spectrum:${property("spectrum_version")}")
 
+    /* not yet updated
     modImplementation("com.simibubi.create:create-fabric-1.20.1:${property("create_fabric_version")}"){
         exclude("dev.emi:trinkets")
         exclude("net.fabricmc.fabric-api:fabric-api")
-    }
+    }*/
 
-    modImplementation("com.github.Noaaan:Matchbooks:${property("matchbooks_version")}")
-    modImplementation("maven.modrinth:Revelationary:${property("revelationary_version")}")
+    modImplementation("maven.modrinth:exclusions-lib:${property("exclusionslib_version")}")
+    modImplementation("de.dafuqs:revelationary:${property("revelationary_version")}")
+    modImplementation("de.dafuqs:additionalentityattributes:${property("additional_entity_attributes_version")}")
+    modImplementation("de.dafuqs:arrowhead:${property("arrowhead_version")}")
+    modImplementation("de.dafuqs:reverb:${property("dimensional_reverb_version")}")
+    modImplementation("de.dafuqs:fractal:${property("fractal_version")}")
 
-    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${property("cardinal_components_version")}")
-    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-scoreboard:${property("cardinal_components_version")}")
-    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-level:${property("cardinal_components_version")}")
-    include("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${property("cardinal_components_version")}")
-    include("dev.onyxstudios.cardinal-components-api:cardinal-components-scoreboard:${property("cardinal_components_version")}")
-    include("dev.onyxstudios.cardinal-components-api:cardinal-components-level:${property("cardinal_components_version")}")
-
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${property("cloth_config_version")}") { exclude("net.fabricmc.fabric-api") }
-    modApi("dev.architectury:architectury-fabric:${property("architectury_version")}") { exclude("net.fabricmc.fabric-api") }
-    modApi("com.terraformersmc:modmenu:${property("modmenu_version")}")
-    modImplementation("vazkii.patchouli:Patchouli:${property("patchouli_version")}")
+    modImplementation("com.klikli_dev:modonomicon-${property("minecraft_version")}-fabric:${property("modonomicon_version")}")
     modImplementation("dev.emi:trinkets:${property("trinkets_version")}")
+    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${property("cca_version")}")
+    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${property("cca_version")}")
+    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-item:${property("cca_version")}")
+    modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-level:${property("cca_version")}")
 
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${property("cloth_config_version")}")
+    modApi("dev.architectury:architectury-fabric:${property("architectury_version")}")
+    modApi("com.terraformersmc:modmenu:${property("modmenu_version")}")
 
-    modImplementation("maven.modrinth:AdditionalEntityAttributes:${property("additional_entity_attributes_version")}")
-    modImplementation("com.github.DaFuqs:Arrowhead:${property("arrowhead_version")}")
-    modImplementation("maven.modrinth:fractal-lib:${property("fractal_version")}")
-    modImplementation("com.github.DaFuqs:DimensionalReverb:${property("dimensional_reverb_version")}")
+    // https://github.com/shedaniel/RoughlyEnoughItems
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-fabric:${property("rei_version")}")
 
-    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${property("rei_version")}")
-    //modRuntimeOnly("maven.modrinth:aC3cM3Vq:${property("mouse_tweaks_version")}")
-
+    // https://github.com/emilyploszaj/emi
+    modCompileOnly("dev.emi:emi-fabric:${property("emi_version")}")
+    modLocalRuntime("dev.emi:emi-fabric:${property("emi_version")}")
 }
 
 
@@ -140,14 +143,14 @@ tasks {
     }
 
     compileJava {
-        targetCompatibility = "17"
-        sourceCompatibility = "17"
+        targetCompatibility = "21"
+        sourceCompatibility = "21"
     }
 
-    compileKotlin {
-        kotlinOptions.jvmTarget = "17"
+    /*compileKotlin {
+        kotlinOptions.jvmTarget = "21"
         kotlinOptions.freeCompilerArgs+="-Xcontext-receivers"
-    }
+    }*/
 
 }
 
